@@ -1,0 +1,11 @@
+<!-- templates/dashboard.html -->
+
+{% extends "base.html" %}{% block content %}<h2>Welcome, {{ session.full_name }}</h2><p>Date:
+{{ today }}</p>
+
+{% if record %}<div class="success">Attendance recorded at {{ record.check_in_time }}.</div>
+
+{% else %}<form method="post" action="{{ url_for('mark_attendance') }}"><button type="submit">Register
+Today's Attendance</button></form>{% endif %}
+
+<p><a href="{{ url_for('logout') }}">Log out</a></p>{% endblock %}

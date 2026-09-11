@@ -1,0 +1,10 @@
+<!-- templates/register.html -->
+
+{% extends "base.html" %}{% block content %}<h2>Student Registration</h2><form method="post">
+
+<label>Full name</label><input name="full_name" required><label>Email</label><input name="email"
+type="email" required>
+
+<label>Password</label><input name="password" type="password" required><button type="submit">Create
+Account</button></form>{% endblock %}
+

@@ -1,0 +1,11 @@
+<!-- templates/login.html -->
+
+
+{% extends "base.html" %}{% block content %}<h2>Student Login</h2><form method="post">
+
+<label>Email</label><input name="email" type="email" required><label>Password</label><input
+name="password" type="password" required>
+
+<button type="submit">Log In</button></form><p>New student? <a
+href="{{ url_for('register') }}">Register</a></p>{% endblock %}
+

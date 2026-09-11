@@ -1,0 +1,9 @@
+<!-- templates/admin.html -->
+
+{% extends "base.html" %}{% block content %}<h2>Attendance
+Report</h2><table><tr><th>Name</th><th>Email</th><th>Date</th><th>Time</th></tr>
+
+{% for row in rows %}<tr><td>{{ row.full_name }}</td><td>{{ row.email
+}}</td><td>{{ row.attendance_date }}</td><td>{{ row.check_in_time }}</td></tr>{% endfor %}
+
+</table>{% endblock %}
